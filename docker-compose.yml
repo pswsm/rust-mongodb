@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  app:
+    container_name: club-backend
+    build:
+      context: .
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    volumes:
+      - club-data:/usr/app/uploads
+    env_file:
+      - production.env
+volumes:
+  club-data:
