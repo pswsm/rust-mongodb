@@ -1,0 +1,19 @@
+[package]
+name = "club-rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+strip = "sybmols"
+lto = "fat"
+panic = "unwind"
+
+[dependencies]
+actix-web = "4.2.1"
+mongodb = "2.3.1"
+actix-rt = "2.7.0"
+serde = "1.0.145"
+futures = "0.3.25"
+anyhow = "1.0.66"
